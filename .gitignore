@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Data & models (large; regenerate via scripts)
+data/*.csv
+models/*.joblib
+# ...but DO ship the promoted production model (~3 MB) so the backend deploys
+# without needing the 50 MB dataset or a training step at build time.
+!models/ensemble_latest.joblib
+models/*_textbranch/
+*.db
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+
+# Env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
